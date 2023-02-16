@@ -1,0 +1,43 @@
+primero instalamos python
+lo descargamos de python oficial y luego lo instalamos, no olvidarse de tildar la opcion para que ponga el path en las variables de entorno. 
+liego instalamos django con la intruccion
+
+python -m pip install django==4.1.7 que es la ultima version que hoy esta disponible
+
+luego dentro de la carpeta para el projecto hacemos
+django-admin startproject miNomreProjecto . eso nos crea las carpetas para iniciar el projecto
+
+estando en el projecto nos posicionamos en la carpeta miNombreProjecto
+
+una vez en la carptea del proyecto tenemos que hacer la migracion para tener un backup de los datos
+
+python manage.py migrate
+
+despues que ya hice el migrate puedo llamar al servidor
+
+python manage.py runserver y puedo llamar al localhost:8000 en mi navegador
+
+
+vistas (views) son simplemente funciones en donde hago lo que quiero mostrar, si tengo que pasar variables desde los urls.py despues de la ruta entre <> pongo lo que quiero mandar al views ejemplo 
+path('adulto/<int:edad>/', views.adulto, name='adulto')
+
+******************
+
+plantillas
+
+como primer medida en settings.py tenemos que decirle donde encuentra las plantillas, 
+
+creamos una carpeta desde el raiz de nuestro proyecto, misma altura qeu el manage.py y la llamamos template, mismo nombre que ponemos en template dentro del settings.py que se agega dentro de los corchetes y lo encerramos entr comillas.
+
+en urls.py importamos la plantilla de la siguiente manera
+from django.shortcuts import render
+
+************************
+crear superusuario de django
+
+python manageg createsuperuser
+
+crear aplicacion
+phyton manage.py startapp catalog (nombre de mi app)
+
+Ojo que si borrar algun catalogo se complica con la base de datos y hay que regenerar todo el catalogo nuevamente. mucho lio es por ahora
