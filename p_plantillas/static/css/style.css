@@ -1,0 +1,146 @@
+:root {
+  --color-primary: #222D33;
+  --color-secundary: #5F5E63;
+  --color-title: #222;
+  --color-text: #CDB378;
+  --color-bg: #dedede;
+  --font-title: fresh;
+  --font-text: cafe;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+  color: var(--color-text);
+}
+
+header {
+  height: 50px;
+  background-color: #fff;
+}
+
+nav {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-primary);
+}
+
+nav img,
+footer img {
+  width: 50px;
+  height: 50px;
+  margin: 25px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul li {
+  padding: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-text);
+  font-family: var(--font-title);
+}
+
+nav ul li a:hover {
+  color: white;
+}
+
+main {
+  background-color: var(--color-bg);
+  width: 100vw;
+  min-height: calc(100vh - 250px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px;
+}
+
+footer {
+  width: 100vw;
+  min-height: 150px;
+  background-color: var(--color-text);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer ul {
+  list-style-type: none;
+
+}
+
+footer ul li a {
+  color: var(--color-title);
+  text-decoration: none;
+}
+
+
+@font-face {
+  font-family: fresh;
+  src: url('../fonts/Fresh.ttf');
+}
+
+@font-face {
+  font-family: cafe;
+  src: url('../fonts/Cafe.ttf');
+}
+
+.about {
+  display: flex;
+}
+
+.about-img {
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+}
+
+.about-content {
+  width: 350px;
+  padding: 25px;
+}
+
+.portfolio-container {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.portfolio-images {
+  width: 350px;
+  height: 200px;
+  margin: 10px;
+}
+
+.portfolio-img {
+  padding: 10px;
+  max-width: 100%;
+}
