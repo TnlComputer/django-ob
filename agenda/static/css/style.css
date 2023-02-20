@@ -1,0 +1,40 @@
+:root {
+  --color-primery: #2ea3f2;
+  /* --color-secondary: ; */
+  --color-text: #666;
+  --font-main: Roboto-Bold;
+  --font-text: Roboto-Regular;
+}
+
+/* Main Settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-text);
+  color: var(--color-text)
+}
+
+@font-face {
+  font-family: Roboto-bold;
+  src: url('../font/Roboto-Bold.ttf');
+}
+
+@font-face {
+  font-family: Roboto-regular;
+  src: url('../font/Roboto-Regular.ttf');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-main);
+}
+
+/* End  Main Settings */
+
+/* Layout settings*/
+/* End Layout settings*/
