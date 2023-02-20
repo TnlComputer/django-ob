@@ -4,7 +4,7 @@
       "previewLimit": 50,
       "driver": "SQLite",
       "name": "sqlite3",
-      "database": "${workspaceFolder:Django}/relations/db.sqlite3"
+      "database": "${workspaceFolder:Django}/ecommerce/db.sqlite3"
     }
   ]
 }

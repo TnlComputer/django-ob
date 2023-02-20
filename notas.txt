@@ -35,7 +35,7 @@ from django.shortcuts import render
 ************************
 crear superusuario de django
 
-python manageg createsuperuser
+python manage.py createsuperuser
 
 crear aplicacion
 phyton manage.py startapp catalog (nombre de mi app)
@@ -73,5 +73,48 @@ DATABASES = {
 }
 
 una vez que hiciste esta configuracion y el PostgreSQL que ya debe estar residente corriendo, podemos hacer el python manage.py migrate para que se conecte nuestro proyecto a la base de datos y genere todas las tablas en el PostgreSQL
+
+
+*********************************************************************************************************************
+
+PANEL ADMINISTRACION - DJANGO
+
+GENERAR LOS GRUPOS Y LO QUE TIENEN PERMITIDO hacer
+
+GENERAR LOS USUARIOS PARA ESOS GRUPOS Y ASIGNARLE EL GRUPOS
+
+Registrar los modulos para manejarlos con django
+el admin.py es el archivo para registrar en el panel del administracion
+
+from .models import Product
+
+# gestionar los modelos de administracion, con la importacion del ModelAdmin
+
+<code>
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ("name", "short_description", "stock")
+    # agregamos una busqueda y le decimos en cuales campos queremos buscar
+    search_fields = ("name", "short_description")
+
+    # agregamos filtros
+    list_filter = ("name", "short_description",
+                   "description", "stock", "discount_until")
+
+    # gerarquias en el filtrado
+    # date_hierarchy = 'discount_until'
+
+
+admin.site.register(Product, ProductAdmin)
+</code>
+
+
+para pasar el panel del Admin al españos
+
+en el settings.py en lengauge, cambiar a es,ar y listo. ya paso al español, 
+cambia a utf-3 pero ahi se rompio en el panel, asi qeu le saque el -3
+
+**********************************************************************************************
+
+
 
 
