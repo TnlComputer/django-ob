@@ -41,3 +41,37 @@ crear aplicacion
 phyton manage.py startapp catalog (nombre de mi app)
 
 Ojo que si borrar algun catalogo se complica con la base de datos y hay que regenerar todo el catalogo nuevamente. mucho lio es por ahora
+
+
+para usar en los get o filter para hacer un where id > o igual que y todas esas operaciones, se hacen de esta manera
+
+ejemplo = Ejemplo.objetcs.filter(id__lte=15)
+
+__lte: menor o igual que (lower than equals)
+__gte: mayor o igual que (upper than equals)
+
+__lt: menor que (lower than)
+__ft mayor que (upper than)
+
+_Contains: contiene
+__Exact: exacto
+
+
+PostgreSQL
+
+para usar PostgreSQL hay que modificar en el settings del proyecto el DATABASES de la siguiente manera:
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mydatabase',
+        'USER': 'mydatabaseuser', # si no creaste el otro usuarios es  postgres
+        'PASSWORD': 'mypassword', # es la contraseña que te hizo poner cuando instalaste el PostgreSQL
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
+}
+
+una vez que hiciste esta configuracion y el PostgreSQL que ya debe estar residente corriendo, podemos hacer el python manage.py migrate para que se conecte nuestro proyecto a la base de datos y genere todas las tablas en el PostgreSQL
+
+
