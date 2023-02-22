@@ -111,7 +111,14 @@ admin.site.register(Product, ProductAdmin)
 para pasar el panel del Admin al españos
 
 en el settings.py en lengauge, cambiar a es,ar y listo. ya paso al español, 
-cambia a utf-3 pero ahi se rompio en el panel, asi qeu le saque el -3
+cambia a utc-3 pero ahi se rompio en el panel, asi qeu le saque el -3
+Lo correcto en el lugar de 
+
+TIME_ZONE = 'UTC''
+
+es
+
+TIME_ZONE = 'America/Argentina/Buenos_Aires'
 
 **********************************************************************************************
 

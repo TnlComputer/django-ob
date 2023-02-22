@@ -1,0 +1,11 @@
+{% extends 'layouts/base.html' %}
+<hr />
+{% block 'title' %}Inicio{% endblock 'title' %}
+<hr />
+{% block 'content' %}
+<h1>Bienvenido a tu gestor personal</h1>
+<div class="cards">
+  <a class="card" href=" {% url 'contact' %}"> Contactos </a>
+</div>
+
+{% endblock 'content' %}
